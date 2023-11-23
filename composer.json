@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "7.4 - 8.2",
-    "t3easy/ce-classes": "^1.0",
+    "t3easy/ce-classes": "^1.1",
     "t3easy/video-attributes": "^1.0",
     "typo3/cms-core": "^10.4 || ^11.5 || ^12.4",
     "typo3/cms-fluid": "^10.4 || ^11.5 || ^12.4",
