@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:t3easy_tile/Resources/Private/Language/locallang_ttc.xlf" date="2021-11-29T13:14:13Z" product-name="t3easy_tile">
+		<header/>
+		<body>
+			<trans-unit id="CType.t3easy_tile" resname="CType.t3easy_tile">
+				<source>Tile</source>
+				<target>Kachel</target>
+			</trans-unit>
+			<trans-unit id="CType.t3easy_tile.description" resname="CType.t3easy_tile.description">
+				<source>A tile content element</source>
+				<target>Ein Kachel Inhaltselement</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.itemGroups.height-large" resname="t3easy_ce_classes.itemGroups.height-large">
+				<source>Height on large devices and up</source>
+				<target>Höhe auf großen Geräten und größer</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.itemGroups.height-medium" resname="t3easy_ce_classes.itemGroups.height-medium">
+				<source>Height on medium devices and up</source>
+				<target>Höhe auf mittleren Geräten und größer</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.itemGroups.height-small" resname="t3easy_ce_classes.itemGroups.height-small">
+				<source>Height on small devices and up</source>
+				<target>Höhe auf kleinen Geräten und größer</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.itemGroups.width-large" resname="t3easy_ce_classes.itemGroups.width-large">
+				<source>Width on large devices and up</source>
+				<target>Breite auf großen Geräten und größer</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.itemGroups.width-medium" resname="t3easy_ce_classes.itemGroups.width-medium">
+				<source>Width on medium devices and up</source>
+				<target>Breite auf mittleren Geräten und größer</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.itemGroups.width-small" resname="t3easy_ce_classes.itemGroups.width-small">
+				<source>Width on small devices and up</source>
+				<target>Breite auf kleinen Geräten und größer</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.items.height-200" resname="t3easy_ce_classes.items.height-200">
+				<source>Twice the width</source>
+				<target>Doppelte Breite</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.items.height-50" resname="t3easy_ce_classes.items.height-50">
+				<source>Half the width</source>
+				<target>Halbe Breite</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.items.height-auto" resname="t3easy_ce_classes.items.height-auto">
+				<source>Automatically</source>
+				<target>Automatisch</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.items.width-12" resname="t3easy_ce_classes.items.width-12">
+				<source>100%</source>
+				<target>100%</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.items.width-3" resname="t3easy_ce_classes.items.width-3">
+				<source>25%</source>
+				<target>25%</target>
+			</trans-unit>
+			<trans-unit id="t3easy_ce_classes.items.width-6" resname="t3easy_ce_classes.items.width-6">
+				<source>50%</source>
+				<target>50%</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,9 @@
+@import '../tile.constants.typoscript'
+
+styles.content.tile {
+    # cat=content/cHeader/h0; type=int[1-5]; label=Default Header type: Enter the number of the header layout to be used by default
+    defaultHeaderType = 2
+
+    # cat=content/cImage/a0; type=options[lazy,eager,auto,]; label=Default settings for browser-native image lazy loading: Can be "lazy" (browsers could choose to load images later), "eager" (load images right away) or "auto" (browser will determine whether the image should be lazy loaded or not)
+    image.lazyLoading = lazy
+}

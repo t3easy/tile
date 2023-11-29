@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{image}">
+<f:asset.css identifier="tile{id}">
+#{id} {
+    background-image: url("{f:uri.image(image: image, width: 639, cropVariant: 'sm')}");
+}
+@media screen and (min-width: 40em) {
+#{id} {
+    background-image: url("{f:uri.image(image: image, maxWidth: 899, cropVariant: 'md')}");
+}
+}
+@media screen and (min-width: 64em) {
+#{id} {
+    background-image: url("{f:uri.image(image: image, maxWidth: 1279, cropVariant: 'lg')}");
+}
+}
+<f:if condition="{imageHover}">
+#{id}:hover {
+    background-image: url("{f:uri.image(image: imageHover, width: 639, cropVariant: 'sm')}");
+}
+@media screen and (min-width: 40em) {
+#{id}:hover {
+    background-image: url("{f:uri.image(image: imageHover, maxWidth: 899, cropVariant: 'md')}");
+}
+}
+@media screen and (min-width: 64em) {
+#{id}:hover {
+    background-image: url("{f:uri.image(image: imageHover, maxWidth: 1279, cropVariant: 'lg')}");
+}
+}
+</f:if>
+</f:asset.css>
+</f:if>
+</html>

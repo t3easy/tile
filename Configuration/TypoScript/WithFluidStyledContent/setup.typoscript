@@ -1,0 +1,21 @@
+tt_content.t3easy_tile =< lib.contentElement
+tt_content.t3easy_tile {
+    templateRootPaths {
+        0 = EXT:t3easy_tile/Resources/Private/Templates/
+        1 = {$styles.templates.tile.templateRootPath}
+    }
+
+    partialRootPaths {
+        0 = EXT:t3easy_tile/Resources/Private/Partials/
+        1 = {$styles.templates.tile.partialRootPath}
+        5 = EXT:fluid_styled_content/Resources/Private/Partials/
+    }
+
+    layoutRootPaths {
+        0 = EXT:t3easy_tile/Resources/Private/Layouts/
+        1 = {$styles.templates.tile.layoutRootPath}
+        5 = EXT:fluid_styled_content/Resources/Private/Layouts/
+    }
+}
+
+@import '../tile.setup.typoscript'

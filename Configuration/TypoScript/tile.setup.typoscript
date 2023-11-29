@@ -1,0 +1,11 @@
+tt_content.t3easy_tile {
+    templateName = Tile
+    dataProcessing {
+        10 < lib.tx_t3easyceclasses.split_processor
+
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+            references.fieldName = assets
+        }
+    }
+}

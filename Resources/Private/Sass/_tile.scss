@@ -1,0 +1,166 @@
+$with-link-background: #000000 !default;
+$with-link-background-fallback: false !default;
+$with-link-color: #fefefe !default;
+
+.tile {
+  @include border-radius(10px);
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+
+  &--with-background-video {
+    overflow: hidden;
+  }
+
+  &__background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include xy-gutters($gutter-position: left right bottom top, $gutter-type: padding);
+    &__inner {
+      width: 100%;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  a.tile-link {
+    color: inherit;
+
+    &.button {
+      color: $button-color;
+    }
+  }
+
+  .full &.small-12,
+  .full &.medium-12,
+  .full &.large-12 {
+    @include border-radius(0);
+  }
+
+  &--with-link.tile--without-bg-image:hover {
+    @if $with-link-background-fallback != false {
+      background: $with-link-background-fallback;
+    }
+    background: $with-link-background;
+    color: $with-link-color;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    border: none;
+
+    .upline {
+      color: $with-link-color;
+      transition: color 0.25s ease-out;
+    }
+
+    .headline {
+      color: $with-link-color;
+      transition: color 0.25s ease-out;
+    }
+
+    .ce-bodytext {
+      color: $with-link-color;
+      transition: color 0.25s ease-out;
+    }
+  }
+}
+
+.headline {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  font-size: 1.125rem;
+  @include breakpoint(large) {
+    font-size: 1.75rem;
+  }
+
+  &-medium & {
+    font-size: 1.375rem;
+    @include breakpoint(large) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &-large & {
+    font-size: 2rem;
+    @include breakpoint(large) {
+      font-size: 3.25rem;
+    }
+  }
+}
+
+@each $size in $breakpoint-classes {
+  @include breakpoint($size) {
+    @each $width in (50, 200) {
+      .#{$size}-height-#{$width}:after {
+        padding-bottom: 1% * $width;
+      }
+    }
+  }
+}
+
+@each $size in $breakpoint-classes {
+  $breakpoint: $size only;
+  @if $size == large {
+    $breakpoint: $size;
+  }
+  @include breakpoint($breakpoint) {
+    .#{$size}-height-auto {
+      .tile-content {
+        position: relative;
+        height: auto;
+        @include xy-gutters($gutters: (small: 3rem, medium: 6rem), $gutter-position: bottom top, $gutter-type: padding);
+      }
+      &:after {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint(small) {
+  .small-6.small-height-50:after,
+  .small-12.small-height-50:after {
+    padding-bottom: calc(50% - 16px);
+  }
+}
+
+@include breakpoint(medium) {
+  .medium-6,
+  .medium-12 {
+    &.small-height-50:after,
+    &.medium-height-50:after {
+      padding-bottom: calc(50% - 16px);
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .large-6,
+  .large-12 {
+    &.small-height-50:after,
+    &.medium-height-50:after,
+    &.large-height-50:after {
+      padding-bottom: calc(50% - 16px);
+    }
+  }
+}

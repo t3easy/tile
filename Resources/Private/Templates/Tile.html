@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}" class="tile cell {f:if(condition: i.isLast, then: '{class}', else: '{class} ') -> f:for(each: '{classes}', as: 'class', iteration: 'i')}{f:if(condition: '{files.0.type} == 2', then: ' tile--with-bg-image', else: ' tile--without-bg-image')}{f:if(condition: '{files.0.type} == 4', then: ' tile--with-background-video')}{f:if(condition: data.header_link, then: ' tile--with-link', else: ' tile--without-link')}">
+    <f:link.typolink parameter="{data.header_link}" class="tile-link">
+        <f:switch expression="{files.0.type}">
+            <f:case value="4">
+                <f:media class="tile__background-video" file="{files.0}" alt="{files.0.alternative}" title="{files.0.title}" additionalConfig="{controls: files.0.properties.controls, disablepictureinpicture: files.0.properties.disable_picture_in_picture, loop: files.0.properties.loop, muted: files.0.properties.muted, playsinline: files.0.properties.playsinline}" />
+            </f:case>
+            <f:defaultCase>
+                <f:render partial="TileBackgound" arguments="{image: files.0, imageHover: files.1, id: 'c{data.uid}'}"/>
+            </f:defaultCase>
+        </f:switch>
+        <div class="tile-content">
+            <div class="tile-content__inner">
+                <f:if condition="{data.subheader}">
+                    <div class="upline{f:if(condition: data.header_position, then: ' text-{data.header_position}')}">{data.subheader}</div>
+                </f:if>
+                <f:render partial="Header/Header" arguments="{
+                    header: data.header,
+                    layout: data.header_layout,
+                    positionClass: 'headline{f:if(condition: data.header_position, then: \' text-{data.header_position}\')}',
+                    default: settings.defaultHeaderType}"/>
+                <f:if condition="{data.bodytext}">
+                    <div class="ce-bodytext">
+                        <f:format.html>{data.bodytext}</f:format.html>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </f:link.typolink>
+</div>
+</html>

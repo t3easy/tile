@@ -1,0 +1,14 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        t3easy_tile {
+            iconIdentifier = content-textmedia
+            title = LLL:EXT:t3easy_tile/Resources/Private/Language/locallang_ttc.xlf:CType.t3easy_tile
+            description = LLL:EXT:t3easy_tile/Resources/Private/Language/locallang_ttc.xlf:CType.t3easy_tile.description
+            tt_content_defValues {
+                CType = t3easy_tile
+                t3easy_ce_classes = small-3
+            }
+        }
+    }
+    show := addToList(t3easy_tile)
+}

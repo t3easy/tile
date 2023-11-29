@@ -1,0 +1,26 @@
+tt_content.t3easy_tile = FLUIDTEMPLATE
+tt_content.t3easy_tile {
+    templateRootPaths {
+        0 = EXT:t3easy_tile/Resources/Private/Templates/
+        10 = {$styles.templates.tile.templateRootPath}
+    }
+
+    partialRootPaths {
+        0 = EXT:t3easy_tile/Resources/Private/Partials/
+        10 = {$styles.templates.tile.partialRootPath}
+    }
+
+    layoutRootPaths {
+        0 = EXT:t3easy_tile/Resources/Private/Layouts/
+        10 = {$styles.templates.tile.layoutRootPath}
+    }
+
+    settings {
+        defaultHeaderType = {$styles.content.tile.defaultHeaderType}
+        media {
+            lazyLoading = {$styles.content.tile.image.lazyLoading}
+        }
+    }
+}
+
+@import '../tile.setup.typoscript'
