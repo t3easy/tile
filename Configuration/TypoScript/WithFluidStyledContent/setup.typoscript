@@ -18,4 +18,4 @@ tt_content.t3easy_tile {
     }
 }
 
-@import '../tile.setup.typoscript'
+@import 'EXT:t3easy_tile/Configuration/TypoScript/tile.setup.typoscript'

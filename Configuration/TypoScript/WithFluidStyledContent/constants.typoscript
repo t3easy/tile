@@ -1,1 +1,1 @@
-@import '../tile.constants.typoscript'
+@import 'EXT:t3easy_tile/Configuration/TypoScript/tile.constants.typoscript'

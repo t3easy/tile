@@ -1,4 +1,4 @@
-@import '../tile.constants.typoscript'
+@import 'EXT:t3easy_tile/Configuration/TypoScript/tile.constants.typoscript'
 
 styles.content.tile {
     # cat=content/cHeader/h0; type=int[1-5]; label=Default Header type: Enter the number of the header layout to be used by default
