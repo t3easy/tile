@@ -276,7 +276,7 @@ call_user_func(static function () {
                             'group' => 'height-large',
                         ],
                         [
-                            'LLL:EXT:t3easy_tile/Resources/Private/Language/locallang_ttc.xlf:t3easy_ce_classes.items.height-200',
+                            'label' => 'LLL:EXT:t3easy_tile/Resources/Private/Language/locallang_ttc.xlf:t3easy_ce_classes.items.height-200',
                             'value' => 'large-height-200',
                             'group' => 'height-large',
                         ],
